@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace CharacterManager
         public Manager()
         {
             InitializeComponent();
+        }
+
+        private void newToolStripMenuItem_Click( object sender, EventArgs e )
+        {
+            CharControl charControl = new CharControl();
+            flowLayoutPanel1.Controls.Add( charControl );
+            charControl.Show();
         }
     }
 }
